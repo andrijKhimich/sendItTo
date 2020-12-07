@@ -1,0 +1,327 @@
+.hero {
+  color: $white;
+  padding-bottom: 200px;
+
+  @include d(1600) {
+    padding-bottom: 0;
+  }
+
+  &-content {
+    padding-top: 170px;
+  }
+
+  &-mask {
+    top: 0;
+    right: 0;
+  }
+
+  &__text {
+    padding: 18px 0 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    max-width: 490px;
+    margin-top: -20px;
+  }
+}
+
+.mask {
+  position: absolute;
+}
+
+.popular {
+  margin-top: -64px;
+  padding: 100px 0;
+
+  @include d(1600) {
+    padding: 20px 0;
+  }
+
+  &__content {
+    padding-left: 118px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 55px 0 30px -20px;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 54px;
+    }
+  }
+
+  &__circle {
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    box-shadow: $boxShadow;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+
+    img {
+      max-width: 54px;
+    }
+  }
+}
+
+.steps {
+  text-align: center;
+  padding: 70px 0 90px 0;
+
+  @include d(1600) {
+    padding: 70px 0 10px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 68px auto;
+  }
+
+  &__item {
+    max-width: 120px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__icon {
+    margin-bottom: 18px;
+
+    img {
+      margin: 0 auto;
+      max-width: 62px;
+      width: auto;
+    }
+  }
+
+  &__title {
+    p {
+      line-height: 1.285em;
+    }
+  }
+}
+
+.section-title {
+  margin-bottom: 26px;
+}
+
+.map {
+  padding: 10px 0;
+
+  &-img {
+    margin: 0 auto;
+    max-width: 980px;
+  }
+
+  &-pane {
+    width: 255px;
+    text-align: center;
+    text-align: left;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    padding: 23px 30px;
+    position: absolute;
+    top: 38%;
+    left: 27%;
+
+    table {
+      th {
+        color: $primarySecond;
+        font-size: 16px;
+        padding: 5px;
+      }
+
+      td {
+        font-size: 14px;
+        color: $black;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.choice {
+  padding: 200px 0;
+  color: $gray;
+  position: relative;
+
+  &-mask {
+    top: 70px;
+    left: 0;
+    height: 859px;
+  }
+
+  &__text {
+    max-width: 430px;
+    margin: 64px auto;
+  }
+
+  &__img {
+    margin-bottom: 24px;
+    max-width: 470px;
+  }
+
+  &__content {
+    margin: 13px 20px 0px 90px;
+
+    &_sm {
+      max-width: 330px;
+      margin-left: 27px;
+    }
+  }
+}
+
+.app {
+  margin: 150px 0;
+  position: relative;
+  color: $white;
+
+  @include d(1600) {
+    margin: 50px 0;
+  }
+
+  &-mask {
+    top: 20px;
+  }
+
+  &__content {
+    padding: 170px 0 210px;
+
+  }
+
+  .title-2,
+  & h2 {
+    color: $white;
+  }
+
+  &__text {
+    max-width: 470px;
+    margin: 77px 0 30px 46px;
+
+    p {
+      max-width: 340px;
+    }
+
+    .btns-row {
+      margin: 35px 0;
+    }
+  }
+}
+
+.support {
+  padding: 280px 0 200px 0;
+
+  @include d(1600) {
+    padding: 63px 0;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__img {
+    max-width: 780px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include d(1600) {
+      max-width: 633px;
+    }
+  }
+
+  &__text {
+    padding-top: 30px;
+
+    p {
+      max-width: 480px;
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.testimonials {
+  padding: 257px 0;
+
+  &__content {
+    display: flex;
+    position: relative;
+  }
+
+  &__title {
+    max-width: 300px;
+    margin-right: 56px;
+    margin-top: 20px;
+  }
+
+  &-slider {
+    display: flex;
+    flex: 0 0 926px;
+    overflow: hidden;
+
+    &__item {
+      display: flex;
+      box-shadow: $boxShadow;
+      flex: 0 0 633px;
+      padding: 10px;
+    }
+
+    &__img {
+      flex: 0 0 220px;
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      padding: 46px 45px 53px 48px;
+      color: $gray;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+
+      p {
+        color: $textColor;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      span {
+        font-size: 14px;
+        color: $grayLight;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      text-indent: 30px;
+    }
+  }
+}
+
+.slider-btn {
+  background-color: transparent;
+  border: none;
+
+}

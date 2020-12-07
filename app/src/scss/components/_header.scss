@@ -1,1 +1,87 @@
 // header styles
+.header {
+  padding: 37px 0 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  color: $white;
+  font-size: 16px;
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 167px);
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+
+  &-login {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+
+  &:first-child {
+    margin-right: 48px;
+  }
+
+  img {
+    flex: 0 0 14px;
+    margin-right: 10px;
+  }
+}
+
+.logo {
+  max-width: 167px;
+}
+
+.nice-select {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 0;
+  margin-left: 10px;
+  height: 40px;
+
+  .list {
+    color: $textColor;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.select {
+  &-box {
+    display: flex;
+    align-items: center;
+
+    img {
+      flex: 0 0 14px;
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  &-country,
+  &-language {
+    margin-right: 44px;
+  }
+
+}
