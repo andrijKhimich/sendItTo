@@ -1,22 +1,68 @@
 .hero {
   color: $white;
   padding-bottom: 200px;
+  position: relative;
 
   @include d(1600) {
     padding-bottom: 0;
   }
 
+  @include d(767) {
+    padding-bottom: 140px;
+  }
+
+  @include d(575) {
+    padding-bottom: 120px;
+  }
+
   &-content {
     padding-top: 170px;
+    position: relative;
+    z-index: 1;
+
+    @include d(991) {
+      padding-top: 120px;
+    }
   }
 
   &-mask {
     top: 0;
     right: 0;
+
+    @include m(2200) {
+      width: 90vw;
+      top: -330px;
+    }
+
+    @include m(2500) {
+      width: 83vw;
+    }
+
+    @include d(991) {
+      width: 110vw;
+    }
+
+    @include d(767) {
+      width: 120vw;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__text {
-    padding: 18px 0 0 30px;
+    padding: 120px 0 0 30px;
+
+    @include d(1600) {
+      padding: 18px 0 0 30px;
+    }
+
+    @include d(1199) {
+      padding: 18px 0 0 40px;
+    }
+
+    @include d(767) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -26,7 +72,31 @@
   &__img {
     max-width: 490px;
     margin-top: -20px;
+
+    @include d(1199) {
+      margin-top: 0;
+      max-width: 340px;
+      margin-left: auto;
+    }
+
+    @include d(991) {
+      max-width: 320px;
+    }
+
+    @include d(767) {
+      margin: 0 auto;
+      display: none;
+    }
   }
+}
+
+.circle {
+  max-width: 900px;
+  width: 58vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .mask {
@@ -41,14 +111,37 @@
     padding: 20px 0;
   }
 
+  @include d(1199) {
+    padding: 60px 0;
+    margin-top: 0;
+  }
+
+  @include d(767) {
+    padding: 60px 0 10px 0;
+  }
+
   &__content {
     padding-left: 118px;
+
+    @include d(991) {
+      padding-left: 0;
+    }
   }
 
   &__row {
     display: flex;
     align-items: center;
     margin: 55px 0 30px -20px;
+
+    @include d(1299) {
+      margin: 30px 0 30px 0;
+      justify-content: space-between;
+    }
+
+    @include d(767) {
+      flex-wrap: wrap;
+      margin: 40px -15px;
+    }
   }
 
   &__item {
@@ -58,6 +151,23 @@
 
     &:not(:last-child) {
       margin-right: 54px;
+
+      @include d(1299) {
+        margin-right: 20px;
+      }
+
+      @include d(991) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    @include d(767) {
+      padding: 0 15px;
+      width: 33.33%;
+
+      @include d(991) {
+        margin: 0 0 30px 0;
+      }
     }
   }
 
@@ -72,8 +182,21 @@
     justify-content: center;
     margin-bottom: 25px;
 
+    @include d(1299) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include d(991) {
+      margin: 0 auto 30px;
+    }
+
     img {
       max-width: 54px;
+
+      @include d(1299) {
+        max-width: 40px;
+      }
     }
   }
 }
@@ -84,6 +207,10 @@
 
   @include d(1600) {
     padding: 70px 0 10px 0;
+  }
+
+  @include d(991) {
+    padding: 40px 0 10px 0;
   }
 
   &__row {
@@ -162,28 +289,53 @@
   color: $gray;
   position: relative;
 
+  @include d(1199) {
+    padding: 100px 0;
+  }
+
   &-mask {
     top: 70px;
     left: 0;
     height: 859px;
+
+    @include d(1199) {
+      top: 0;
+    }
   }
 
   &__text {
     max-width: 430px;
     margin: 64px auto;
+
+    @include d(767) {
+      margin: 0 auto 40px auto;
+      max-width: 100%;
+    }
   }
 
   &__img {
     margin-bottom: 24px;
     max-width: 470px;
+
+    @include d(767) {
+      margin: 0 auto 40px auto;
+    }
   }
 
   &__content {
     margin: 13px 20px 0px 90px;
 
+    @include d(991) {
+      margin: 0;
+    }
+
     &_sm {
       max-width: 330px;
       margin-left: 27px;
+
+      @include d(767) {
+        margin: 0;
+      }
     }
   }
 }
@@ -197,12 +349,56 @@
     margin: 50px 0;
   }
 
+  @include d(1199) {
+    overflow: hidden;
+  }
+
+  @include m(1921) {
+    overflow: hidden;
+  }
+
   &-mask {
-    top: 20px;
+    top: -30px;
+    width: 1540px;
+    right: 0;
+
+    @include m(1600) {
+      top: 50px;
+      width: 100vw;
+    }
+
+    @include d(1199) {
+      top: 0;
+      left: -100px;
+    }
+
+    @include d(991) {
+      right: 0;
+      left: auto;
+      width: auto;
+    }
+  }
+
+  &__img {
+    @include d(767) {
+      position: absolute;
+      bottom: -70px;
+      z-index: 0;
+    }
   }
 
   &__content {
-    padding: 170px 0 210px;
+    padding: 270px 0 210px;
+    position: relative;
+    z-index: 1;
+
+    @include d(1600) {
+      padding: 170px 0 210px;
+    }
+
+    @include d(1199) {
+      padding: 100px 0;
+    }
 
   }
 
@@ -215,6 +411,15 @@
     max-width: 470px;
     margin: 77px 0 30px 46px;
 
+    @include d(991) {
+      margin: 0;
+    }
+
+    @include d(767) {
+      position: relative;
+      z-index: 1;
+    }
+
     p {
       max-width: 340px;
     }
@@ -226,7 +431,7 @@
 }
 
 .support {
-  padding: 280px 0 200px 0;
+  padding: 200px 0 200px 0;
 
   @include d(1600) {
     padding: 63px 0;
@@ -245,6 +450,22 @@
     @include d(1600) {
       max-width: 633px;
     }
+
+    @include d(1299) {
+      max-width: 480px;
+    }
+
+    @include d(991) {
+      max-width: 50%;
+    }
+
+    @include d(767) {
+      // max-width: 50%;
+      position: static;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -259,33 +480,72 @@
 
 .testimonials {
   padding: 257px 0;
+  position: relative;
+
+  @include d(1299) {
+    padding: 200px 0;
+  }
+
+  @include d(992) {
+    padding: 100px 0;
+  }
+
+  @include d(767) {
+    padding: 60px 0;
+  }
+
+  &-mask {
+    top: -100px;
+    right: 0;
+    max-width: 800px;
+  }
 
   &__content {
     display: flex;
     position: relative;
+
+    @include d(767) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
     max-width: 300px;
     margin-right: 56px;
     margin-top: 20px;
+    display: inline-block;
+
+    @include d(767) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &-slider {
-    display: flex;
-    flex: 0 0 926px;
-    overflow: hidden;
+    display: inline-flex;
 
     &__item {
       display: flex;
       box-shadow: $boxShadow;
-      flex: 0 0 633px;
-      padding: 10px;
+      background-color: $white;
+
+      @include d(575) {
+        flex-wrap: wrap;
+      }
     }
 
     &__img {
       flex: 0 0 220px;
       height: 100%;
+
+      @include d(991) {
+        flex: 0 0 180px;
+      }
+
+      @include d(575) {
+        flex: 0 0 200px;
+        margin: 0 auto;
+      }
 
       img {
         height: 100%;
@@ -296,10 +556,18 @@
     &__content {
       padding: 46px 45px 53px 48px;
       color: $gray;
+
+      @include d(991) {
+        padding: 20px;
+      }
     }
 
     &__title {
       margin-bottom: 24px;
+
+      @include d(575) {
+        text-align: center;
+      }
 
       p {
         color: $textColor;
@@ -323,5 +591,140 @@
 .slider-btn {
   background-color: transparent;
   border: none;
+}
 
+.credit {
+  padding: 15px 0;
+
+  &__text {
+    max-width: 440px;
+    color: $gray;
+    margin: 0 auto;
+
+    @include d(767) {
+      max-width: 100%;
+    }
+  }
+
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 60px -15px;
+
+    @include d(991) {
+      margin: 60px 0;
+    }
+
+    @include d(767) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    flex: 0 0 300px;
+    margin: 0 15px;
+
+    @include d(991) {
+      flex: 0 0 33.333%;
+      margin: 0;
+    }
+
+    @include d(767) {
+      flex: 0 0 100%;
+      margin: 20px 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 60px;
+
+    img {
+      max-width: 264px;
+      width: auto;
+
+      @include d(991) {
+        max-width: 200px;
+        max-height: 110px;
+      }
+
+      @include d(767) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.send {
+  padding: 50px 0 110px 0;
+
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include d(767) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    box-shadow: $boxShadow;
+    padding: 33px 20px 36px 80px;
+    flex: 0 0 373px;
+
+    @include d(1299) {
+      flex: 0 0 320px;
+      padding: 20px 10px 25px 40px;
+    }
+
+    @include d(1199) {
+      flex: 0 0 280px;
+      padding: 20px 10px 25px 30px;
+    }
+
+    @include d(991) {
+      flex: 0 0 240px;
+      padding: 20px 10px 25px 30px;
+    }
+
+    @include d(767) {
+      flex: 0 0 500px;
+      margin: 30px auto;
+    }
+
+    @include d(560) {
+      flex: 0 0 100%;
+      padding: 20px 80px;
+    }
+
+    @include d(380) {
+      flex: 0 0 100%;
+      padding: 20px 40px;
+    }
+  }
+
+  &-list {
+    &__item {
+      background-color: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 11px;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      color: $gray;
+      line-height: 1.75em;
+      transition: color $hover-duration $timing;
+
+      @include rh(991) {
+        &:hover {
+          color: $primarySecond;
+        }
+      }
+    }
+  }
 }
