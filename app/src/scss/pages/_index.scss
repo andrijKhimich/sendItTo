@@ -279,7 +279,8 @@
     padding: 23px 30px;
     position: absolute;
     top: 38%;
-    left: 27%;
+    left: 26%;
+    animation: line 3s infinite;
 
     table {
       th {
@@ -295,6 +296,21 @@
       }
     }
   }
+}
+.map-svg {
+  width: 100%;
+  min-height: 400px;
+  height: 35vw;
+  max-height: 500px;
+}
+.map-svg path#map-line {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 100;
+  stroke-width: 2px;
+  // animation: line 3s infinite;
+  animation-duration: 3s;
+  animation-name: line;
+  animation-iteration-count: infinite;
 }
 
 .choice {
