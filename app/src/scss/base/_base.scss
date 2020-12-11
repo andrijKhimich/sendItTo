@@ -13,7 +13,7 @@ body {
 
   font-size: 18px;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  color: $textColor;
+  color: $gray;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -23,6 +23,7 @@ body {
   -webkit-text-size-adjust: 100%;
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
+
 }
 
 h1,
@@ -33,6 +34,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 700;
+  color: $textColor;
 }
 
 h1 {
@@ -86,7 +88,6 @@ h2 {
   font-size: 60px;
   line-height: 1.17em;
   letter-spacing: -0.03em;
-  color: $textColor;
 
   span {
     color: $primarySecond;
@@ -113,7 +114,6 @@ h3 {
   font-size: 30px;
   margin-bottom: 16px;
   line-height: 0.933em;
-  color: $textColor;
 }
 
 h4 {
@@ -127,7 +127,7 @@ h5 {
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.2em;
 }
 

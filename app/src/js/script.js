@@ -21,8 +21,14 @@ function showContent() {
 
 $(document).ready(function () {
   $('.custom-select').niceSelect();
-
+  $('.send-form__box .send-select').niceSelect();
+  $('.phone-select').niceSelect();
   showContent();
+
+  $(".form-tab").click(function () {
+    $(".form-tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".form-tab__item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
 });
 
 $('.testimonials-slider').slick({

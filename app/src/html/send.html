@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Send</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper inner-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="inner-hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xl-6 offset-xl-1">
+              <div class="section-content">
+                <div class="section-title">
+                  <h2 class="title-2">Send money<span> to Nigeria </span>and pay no fees</h2>
+                </div>
+                <p>Invite a friend and get £2 each when they send their first top-up. Invite as many friends as you
+                  want. Check our
+                  promotions for the best top-up offers.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-5">
+              <div class="form-tab__wrapper">
+                <div class="form__tabs">
+                  <span class="form-tab">Send Money</span>
+                  <span class="form-tab">Mobile TOP-UP</span>
+                </div>
+                <div class="form-tab__content">
+                  <div class="form-tab__item">
+                    <div class="send-form">
+                      <form>
+                        <div class="send-form__row">
+                          <div class="send-form__box">
+                            From:
+                            <select class="custom-select">
+                              <option value="country">Country</option>
+                              <option value="unitedKingdom">United Kingdom</option>
+                              <option value="nigeria">Nigeria</option>
+                              <option value="kenya">Kenya</option>
+                              <option value="pakistan">Pakistan</option>
+                              <option value="poland">Poland</option>
+                              <option value="brazil">Brazil</option>
+                              <option value="india">India</option>
+                              <option value="colombia">Colombia</option>
+                            </select>
+                          </div>
+                          <div class="send-form__box">
+                            To:
+                            <select class="send-select">
+                              <option value="country">Country</option>
+                              <option value="unitedKingdom">United Kingdom</option>
+                              <option value="nigeria">Nigeria</option>
+                              <option value="kenya">Kenya</option>
+                              <option value="pakistan">Pakistan</option>
+                              <option value="poland">Poland</option>
+                              <option value="brazil">Brazil</option>
+                              <option value="india">India</option>
+                              <option value="colombia">Colombia</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="send-form__row">
+                          <div class="send-form__box">
+                            <label for="youSend" class="custom-label">
+                              You send (USD)
+                              <input type="number" id="youSend" class="custom-input" placeholder="0.00">
+                            </label>
+                          </div>
+                          <div class="send-form__box">
+                            <label for="theyResive" class="custom-label">
+                              They receive (NGN)
+                              <input type="number" id="theyResive" class="custom-input" placeholder="0.00">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="send-form__row">
+                          <div class="send-form__box">
+                            Delivery method:
+                            <select class="send-select">
+                              <option value="delivery">Delivery</option>
+                              <option value="CashPickUp">Cash Pick-up</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="send-form__results">
+                          <table>
+                            <tr>
+                              <td>Conversion rate</td>
+                              <td>1 USD = 0,075 NGN</td>
+                            </tr>
+                            <tr>
+                              <td>No Fee - Transfer at €0 fee.</td>
+                              <td>EUR <span>0.00</span></td>
+                            </tr>
+                            <tr>
+                              <td>Total to pay</td>
+                              <td>USD <span>100</span></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <button class="btn btn_violet">Round to <span>110</span> USD</button>
+                      </form>
+                      <div class="send-form__text">
+                        <p>Your loved ones in Nigeria will receive the money instantly in the following methods:</p>
+                      </div>
+                      <div class="form-icons">
+                        <div class="form-icons__item">
+                          <img src="img/send/bank.svg" alt="bank">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                        <div class="form-icons__item">
+                          <img src="img/send/wallet.svg" alt="wallet">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                        <div class="form-icons__item">
+                          <img src="img/send/money.svg" alt="money">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-tab__item">
+                    <div class="send-form">
+                      <form>
+                        <div class="send-form__row">
+                          <div class="select-phone__box">
+                            <select class="phone-select">
+                              <option value="+33">+33</option>
+                              <option value="+33">+80</option>
+                              <option value="+33">+38</option>
+                            </select>
+                            <input type="number" class="phone-input" placeholder="123-45-67">
+                          </div>
+                        </div>
+                        <button class="btn btn_violet">Round to <span>110</span> USD</button>
+                      </form>
+                      <div class="send-form__text">
+                        <p>Your loved ones in Nigeria will receive the money instantly in the following methods:</p>
+                      </div>
+                      <div class="form-icons">
+                        <div class="form-icons__item">
+                          <img src="img/send/bank.svg" alt="bank">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                        <div class="form-icons__item">
+                          <img src="img/send/wallet.svg" alt="wallet">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                        <div class="form-icons__item">
+                          <img src="img/send/money.svg" alt="money">
+                          <p>Lorem, ipsum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="support">
+        <div class="support__content">
+          <img src="img/send/how.jpg" alt="Global support in a range of languages" class="support__img">
+          <div class="container">
+            <div class="col-md-6 offset-md-6">
+              <div class="support__text">
+                <div class="section-title">
+                  <h2 class="title-2">How to send money to <span>Nigeria</span></h2>
+                </div>
+                <ul class="number-list">
+                  <li>Enter Recipient Details</li>
+                  <li>Choose how much to send</li>
+                  <li>Securely pay with your debit card</li>
+                  <li>Get notified instantly via SMS of the status of your transfer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="security">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 offset-lg-1">
+              <div class="section-title">
+                <h2 class="title-2">We take <span>your security</span> very seriously</h2>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="security__text">
+                <p>Invite a friend and get £2 each when they send their first top-up. Invite as many friends as you
+                  want. Check our
+                  promotions for the best top-up offers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="security-row">
+                <div class="security__item">
+                  <div class="security__img">
+                    <img src="img/send/security1.png" alt="All payments are 3DS2 Secure">
+                  </div>
+                  <h5 class="title-5">All payments are 3DS2 Secure</h5>
+                </div>
+                <div class="security__item">
+                  <div class="security__img">
+                    <img src="img/send/security2.png" alt="Verified by MasterCard & Visa">
+                  </div>
+                  <h5 class="title-5">Verified by MasterCard & Visa</h5>
+                </div>
+                <div class="security__item">
+                  <div class="security__img">
+                    <img src="img/send/security3.png" alt="Regulated by the UK FCA">
+                  </div>
+                  <h5 class="title-5">Regulated by the UK FCA (Authorisation Nº…..)</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="app">
+        <img src="img/send/circle.svg" alt="mask" class="circle">
+        <img src="img/send/app-mask.svg" alt="mask" class="mask app-mask">
+        <div class="app__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-5 offset-lg-1">
+                <div class="app__text">
+                  <div class="section-title">
+                    <h2 class="title-2">Save time with the Senditoo app</h2>
+                  </div>
+                  <p>Experience fast and reliable mobile top-ups like never before.</p>
+                  <div class="btns-row">
+                    <button class="btn btn_white btn_app">
+                      <img src="img/home/apple.svg" alt="apple">
+                      <span>
+                        <i>
+                          Download on the
+                        </i>
+                        App Store
+                      </span>
+                    </button>
+                    <button class="btn btn_white btn_app">
+                      <img src="img/home/google-play.svg" alt="google play">
+                      <span>
+                        <i>
+                          Get in on
+                        </i>
+                        Google play
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="app__img">
+                  <img src="img/send/app-send.png" alt="Save time with the Senditoo app">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="refer">
+        <img src="img/home/choice-mask.svg" alt="mask" class="mask refer-mask">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 order-1 order-md-0">
+              <div class="refer__content">
+                <div class="refer__img">
+                  <img src="img/send/refer.svg" alt="A wide refer of ways to send money online">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="refer__text">
+                <div class="section-title">
+                  <h2 class="title-2">
+                    Refer a <span>friends</span>
+                  </h2>
+                </div>
+                <p>Invite a friend and get £2 each when they send their first top-up. Invite as many friends as you
+                  want.
+                </p>
+                <div class="refer-form">
+                  <form>
+                    <div class="refer-form__row">
+                      <div class="refer-form__box">
+                        <label for="referName" class="custom-label">
+                          Name:
+                          <input type="text" id="referName" class="custom-input">
+                        </label>
+                      </div>
+                      <div class="refer-form__box">
+                        <label for="referEmail" class="custom-label">
+                          Email:
+                          <input type="email" id="referEmail" class="custom-input">
+                        </label>
+                      </div>
+                    </div>
+                    <button class="btn btn_violet" type="submit">Refer a Friend</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="credit">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="section-title">
+                <h2 class="title-2">Earn <span>free credit</span> by sharing with a friend</h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="credit__text">
+                <p>Invite a friend and get £2 each when they send their first top-up. Invite as many friends as you
+                  want.
+                  Check our
+                  promotions for the best top-up offers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="credit-row">
+                <div class="credit__item">
+                  <div class="credit__img">
+                    <img src="img/home/credit1.svg" alt="24/7 Live support">
+                  </div>
+                  <h5 class="title-5">24/7 Live support</h5>
+                </div>
+                <div class="credit__item">
+                  <div class="credit__img">
+                    <img src="img/home/credit2.svg" alt="24/7 Live support">
+                  </div>
+                  <h5 class="title-5">Secure payment</h5>
+                </div>
+                <div class="credit__item">
+                  <div class="credit__img">
+                    <img src="img/home/credit3.svg" alt="24/7 Live support">
+                  </div>
+                  <h5 class="title-5">Instant delivery</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="send">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="send-row">
+                <div class="send__item">
+                  <ul class="send-list">
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Nigeria</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Kenya</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Pakistan</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Argentina</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="send__item">
+                  <ul class="send-list">
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Poland</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Brazil</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to India</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Philippines</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="send__item">
+                  <ul class="send-list">
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Colombia</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to India</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Bangladesh</a>
+                    </li>
+                    <li class="send-list__item">
+                      <a href="#" class="send-list__link">Send money to Colombia</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

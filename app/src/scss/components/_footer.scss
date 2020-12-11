@@ -39,6 +39,7 @@
     @include d(991) {
       top: auto;
       bottom: 0;
+      width: 120vw;
     }
 
     @include d(767) {
@@ -51,6 +52,7 @@
     .title-5,
     & h5 {
       margin-bottom: 10px;
+      color: $white;
     }
     @include d(767) {
       margin-bottom: 30px;

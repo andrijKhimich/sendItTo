@@ -3,6 +3,11 @@
   padding-bottom: 200px;
   position: relative;
 
+  .title-1,
+  & h1 {
+    color: $white;
+  }
+
   @include d(1600) {
     padding-bottom: 0;
   }
@@ -294,7 +299,6 @@
 
 .choice {
   padding: 200px 0;
-  color: $gray;
   position: relative;
 
   @include d(1199) {
@@ -563,7 +567,6 @@
 
     &__content {
       padding: 46px 45px 53px 48px;
-      color: $gray;
 
       @include d(991) {
         padding: 20px;
@@ -606,7 +609,6 @@
 
   &__text {
     max-width: 440px;
-    color: $gray;
     margin: 0 auto;
 
     @include d(767) {
@@ -724,7 +726,6 @@
 
     &__link {
       font-size: 16px;
-      color: $gray;
       line-height: 1.75em;
       transition: color $hover-duration $timing;
 
