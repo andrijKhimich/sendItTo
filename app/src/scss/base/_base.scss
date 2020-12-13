@@ -91,6 +91,7 @@ h2 {
 
   span {
     color: $primarySecond;
+    display: inline-block;
   }
 
   @include d(1299) {
@@ -333,6 +334,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   border: none;
   padding: 19px 47px;
   transition: background-color $hover-duration $timing, color $hover-duration $timing;

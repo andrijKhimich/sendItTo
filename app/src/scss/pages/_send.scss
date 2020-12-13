@@ -21,6 +21,11 @@
     @include d(767) {
       margin: 0 auto;
     }
+
+    @include m(1920) {
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -73,6 +78,7 @@
   color: $grayLight;
   width: 50%;
   box-shadow: 0;
+  cursor: pointer;
 }
 
 .form-tab__content {
@@ -164,6 +170,38 @@
     margin: 10px 0;
     font-size: 14px;
     line-height: 1.6em;
+  }
+}
+
+.section__text {
+
+  ol {
+    counter-reset: counter;
+
+    li {
+      position: relative;
+      padding-left: 50px;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+
+      &::before {
+        counter-increment: counter;
+        content: counter(counter);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $white;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
 
@@ -259,35 +297,6 @@
   }
 }
 
-
-.number-list {
-  counter-reset: counter;
-
-  li {
-    position: relative;
-    padding-left: 50px;
-
-    &:not(:last-child) {
-      margin-bottom: 6px;
-    }
-
-    &::before {
-      counter-increment: counter;
-      content: counter(counter);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      color: $white;
-      background-color: $primary;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
 
 .security {
   padding: 160px 0 100px 0;
@@ -408,11 +417,7 @@
 
   &__row {
     display: flex;
-    margin: 0 -12px;
-
-    &:last-of-type {
-      margin-bottom: 50px;
-    }
+    margin: 0 -12px 50px -12px;
   }
 
   &__box {
@@ -438,6 +443,7 @@
   border-bottom: 1px solid $grayLight;
   padding-bottom: 5px;
   background-color: transparent;
+
   &::-webkit-input-placeholder {
     font-family: inherit;
     font-size: 14px;
@@ -461,4 +467,14 @@
     font-size: 14px;
     color: $black;
   }
+}
+
+.wpcf7-response-output {
+  display: none !important;
+}
+.wpcf7-not-valid-tip {
+  position: absolute;
+  bottom: -30px;
+  color: tomato;
+  font-size: 10px;
 }
