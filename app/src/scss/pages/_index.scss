@@ -297,13 +297,19 @@
     }
   }
 }
+
 .map-svg {
   width: 100%;
   min-height: 400px;
   height: 35vw;
   max-height: 500px;
+
+  @include d(575) {
+    min-height: 300px;
+  }
 }
-#map .svg-line {
+
+.map-svg .svg-line {
   stroke-dasharray: 110;
   stroke-dashoffset: 100;
   stroke-width: 2px;
@@ -320,6 +326,10 @@
 
   @include d(1199) {
     padding: 100px 0;
+  }
+
+  @include d(991) {
+    padding: 60px 0;
   }
 
   &-mask {
@@ -640,7 +650,7 @@
     margin: 60px -15px;
 
     @include d(991) {
-      margin: 60px 0;
+      margin: 30px 0 0 0;
     }
 
     @include d(767) {
@@ -685,6 +695,11 @@
 
 .send {
   padding: 50px 0 110px 0;
+
+  @include d(768) {
+    padding: 20px 0 80px 0;
+
+  }
 
   &-row {
     display: flex;

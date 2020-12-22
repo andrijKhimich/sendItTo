@@ -93,6 +93,26 @@
 }
 
 .send-form {
+  .custom-input, .phone-input {
+    font-size: 20px;
+
+    &::-webkit-input-placeholder {
+      font-size: 20px;
+    }
+
+    &::-moz-placeholder {
+      font-size: 20px;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+
   .btn {
     width: 100%;
   }
@@ -125,6 +145,7 @@
       border-radius: 0;
       color: $black;
       border-bottom: 1px solid $grayLight;
+      font-size: 20px;
 
       .list {
         width: 100%;
@@ -241,6 +262,7 @@
 .phone-select {
   width: 90px;
   border-bottom: none;
+  font-size: 20px;
 }
 
 .phone-input {
@@ -472,6 +494,7 @@
 .wpcf7-response-output {
   display: none !important;
 }
+
 .wpcf7-not-valid-tip {
   position: absolute;
   bottom: -30px;
