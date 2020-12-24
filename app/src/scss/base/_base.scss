@@ -56,7 +56,7 @@ h1 {
     font-size: 54px;
   }
 
-  @include d(767) {
+  @include d(768) {
     font-size: 50px;
   }
 
@@ -74,7 +74,7 @@ h1 {
       font-size: 70px
     }
 
-    @include d(767) {
+    @include d(768) {
       font-size: 60px;
     }
 
@@ -106,7 +106,7 @@ h2 {
     font-size: 40px;
   }
 
-  @include d(767) {
+  @include d(768) {
     font-size: 36px;
   }
 }
@@ -413,7 +413,7 @@ textarea {
   .btn:first-child {
     margin-right: 58px;
 
-    @include d(767) {
+    @include d(768) {
       margin-right: 15px;
     }
 
