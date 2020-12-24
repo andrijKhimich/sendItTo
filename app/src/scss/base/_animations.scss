@@ -1,16 +1,88 @@
-@keyframes line {
+@keyframes points {
   0% {
+    opacity: 0;
     stroke-dashoffset: 1000;
   }
 
-  50% {
+  3% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
     stroke-dashoffset: 2000;
   }
 
+  60% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
   100% {
+    opacity: 0;
     stroke-dashoffset: 1000;
   }
 }
+
+.svg-line {
+  stroke-dasharray: 170;
+  stroke-dashoffset: 190;
+  stroke-width: 1px;
+  stroke: $orange;
+}
+
+.anim1,
+.anim2,
+.anim3,
+.anim4,
+.anim5,
+.pane1,
+.pane2,
+.pane3,
+.pane4,
+.pane5 {
+  opacity: 0;
+  animation-duration: 20s;
+  animation-name: points;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.anim2,
+.pane2 {
+  animation-delay: 4s;
+}
+
+.anim3,
+.pane3 {
+  animation-delay: 8s;
+}
+
+.anim4,
+.pane4 {
+  animation-delay: 12s;
+}
+
+.anim5,
+.pane5 {
+  animation-delay: 16s;
+}
+
 
 .show-on-load {
   opacity: 1;

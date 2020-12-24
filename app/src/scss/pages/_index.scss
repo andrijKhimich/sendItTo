@@ -280,7 +280,6 @@
     position: absolute;
     top: 38%;
     left: 26%;
-    animation: line 3s infinite;
 
     table {
       th {
@@ -309,16 +308,6 @@
   }
 }
 
-.map-svg .svg-line {
-  stroke-dasharray: 110;
-  stroke-dashoffset: 100;
-  stroke-width: 2px;
-  stroke: $orange;
-  animation-duration: 25s;
-  animation-name: line;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
 
 .choice {
   padding: 200px 0;
@@ -412,9 +401,7 @@
     }
 
     @include d(991) {
-      right: 0;
-      left: auto;
-      width: auto;
+      display: none;
     }
   }
 
@@ -439,6 +426,9 @@
       padding: 100px 0;
     }
 
+    @include d(991) {
+      background-color: $primaryDark;
+    }
   }
 
   .title-2,
