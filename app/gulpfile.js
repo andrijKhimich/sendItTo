@@ -143,13 +143,13 @@ gulp.task("svgSprite", function () {
     .pipe(
       cheerio({
         run: function ($) {
-          // $("[fill]").removeAttr("fill");
-          // $("[stroke]").removeAttr("stroke");
-          // $("[style]").removeAttr("style");
-          // $("[class]").removeAttr("class");
-          // $("[width]").removeAttr("width");
-          // $("[height]").removeAttr("height");
-          // $("style").remove();
+          $("[fill]").removeAttr("fill");
+          $("[stroke]").removeAttr("stroke");
+          $("[style]").removeAttr("style");
+          $("[class]").removeAttr("class");
+          $("[width]").removeAttr("width");
+          $("[height]").removeAttr("height");
+          $("style").remove();
         },
         parserOptions: {
           xmlMode: true,

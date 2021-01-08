@@ -753,11 +753,14 @@
     &__link {
       font-size: 16px;
       line-height: 1.75em;
-      transition: color $hover-duration $timing;
+      text-shadow: 0 0 0 currentColor;
+      transition: color $hover-duration $timing, text-shadow $hover-duration $timing;
 
       @include rh(991) {
         &:hover {
           color: $primarySecond;
+          // font-weight: 800;
+          text-shadow: 1px 0 0 currentColor;
         }
       }
     }
