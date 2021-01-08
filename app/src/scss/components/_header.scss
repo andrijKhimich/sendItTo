@@ -9,8 +9,9 @@
   color: $white;
   font-size: 16px;
 
-  @include d(340) {
-    font-size: 12px;
+  @include d(768) {
+    padding: 20px 0;
+    font-size: 18px;
   }
 
   &-row {
@@ -30,14 +31,38 @@
     width: calc(100% - 167px);
     justify-content: flex-end;
 
-    @include d(480) {
-      width: calc(100% - 120px);
+    @include d(768) {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $primary;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 80px;
+      padding-left: 15px;
+      left: -10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: left $hover-duration $timing, opacity $hover-duration $timing;
+
+      &.open {
+        left: 0;
+        opacity: 1;
+        pointer-events: initial;
+      }
     }
   }
 
   &-login {
     display: flex;
     align-items: center;
+
+    @include d(768) {
+      display: block;
+    }
   }
 }
 
@@ -48,11 +73,20 @@
   text-transform: uppercase;
   letter-spacing: .06em;
 
+  @include d(768) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
   &:first-child {
     margin-right: 48px;
 
     @include d(991) {
       margin-right: 20px;
+    }
+
+    @include d(768) {
+      margin-right: 0;
     }
   }
 
@@ -64,6 +98,8 @@
 
 .logo {
   max-width: 167px;
+  position: relative;
+  z-index: 10;
 
   @include d(991) {
     max-width: 140px;
@@ -71,10 +107,6 @@
 
   @include d(768) {
     max-width: 120px;
-  }
-
-  @include d(340) {
-    max-width: 100px;
   }
 }
 
@@ -98,8 +130,6 @@
   }
 }
 
-
-
 .select {
   &-box {
     display: flex;
@@ -113,8 +143,8 @@
       margin-left: 10px;
       height: 40px;
 
-      @include d(340) {
-        font-size: 12px;
+      @include d(768) {
+        font-size: 18px;
       }
 
       .list {
@@ -161,37 +191,108 @@
       margin-right: 20px;
 
     }
+
+    @include d(768) {
+      margin-right: 0;
+    }
   }
 
   &-language {
-    @include d(480) {
-      position: absolute;
-      top: 120%;
-      left: 0;
+    @include d(768) {
+      margin-bottom: 10px;
     }
   }
 
 }
 
-.trp-language-switcher, .trp-ls-shortcode-current-language {
+.trp-language-switcher,
+.trp-ls-shortcode-current-language {
   background-color: transparent;
   border: none;
 }
+
 .trp-language-switcher .trp-ls-shortcode-current-language {
   background: transparent;
   border: none;
 }
-.trp-language-switcher:focus .trp-ls-shortcode-language, .trp-language-switcher:hover .trp-ls-shortcode-language {
+
+.trp-language-switcher:focus .trp-ls-shortcode-language,
+.trp-language-switcher:hover .trp-ls-shortcode-language {
   background: transparent;
   border: none;
 }
-.trp-language-switcher > div > a {
+
+.trp-language-switcher>div>a {
   color: $white;
 }
+
 .trp-ls-shortcode-language {
   background-color: transparent;
   border: none;
 }
-.trp-language-switcher > div > a:hover {
+
+.trp-language-switcher>div>a:hover {
   background: transparent;
+}
+
+.humburger {
+  width: 40px;
+  height: 24px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: none;
+
+  @include d(768) {
+    display: block;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: $primary;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      top: 11px;
+      transform-origin: left center;
+    }
+
+    &:nth-child(3) {
+      top: 22px;
+      transform-origin: left center;
+    }
+  }
+
+  &.open span {
+    background-color: $primarySecond;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0;
+    left: 8px;
+  }
+
+  &.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 29px;
+    left: 8px;
+  }
 }
