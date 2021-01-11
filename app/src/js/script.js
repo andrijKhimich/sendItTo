@@ -27,23 +27,42 @@ $(document).ready(function () {
     scrollValue >= 1 ? closeMenu() : null;
   });
 
-  function setPanePosition(element, pane) {
-    const mapBlock = $('.map-img');
-    const positionY = element.offset().top - mapBlock.offset().top;
-    const positionX = element.offset().left - mapBlock.offset().left;
-    pane.css({
-      top: positionY + 15 + 'px',
-      left: positionX + 15 + 'px'
-    });
+  function setPanePosition(position, pane) {
+    var windowWidth = $(window).width();
+    if (($('.map-img').length > 0) && (windowWidth >= 768)) {
+      const mapBlock = $('.map-img');
+      const positionY = position.offset().top - mapBlock.offset().top;
+      const positionX = position.offset().left - mapBlock.offset().left;
+      pane.css({
+        top: positionY + 15 + 'px',
+        left: positionX + 15 + 'px'
+      });
+    } else {
+      pane.css({
+        top: "",
+        left: ""
+      });
+    }
+
   }
 
-  if (($('.map-svg').length > 0) && (window.width > 768)) {
+  // if (($('.map-img').length > 0) && ($(window).width() >= 768)) {
+  setPanePosition($('.position1'), $('.pane1'));
+  setPanePosition($('.position2'), $('.pane2'));
+  setPanePosition($('.position3'), $('.pane3'));
+  setPanePosition($('.position4'), $('.pane4'));
+  setPanePosition($('.position5'), $('.pane5'));
+  // }
+
+  $(window).on('resize', function () {
+    // if (($(window).width() >= 768)) {
     setPanePosition($('.position1'), $('.pane1'));
     setPanePosition($('.position2'), $('.pane2'));
     setPanePosition($('.position3'), $('.pane3'));
     setPanePosition($('.position4'), $('.pane4'));
     setPanePosition($('.position5'), $('.pane5'));
-  }
+    // }
+  });
 
   if ($('.testimonials-slider').length > 0) {
     initTestimonialsSlider();

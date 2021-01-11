@@ -6,13 +6,27 @@
   .app__content {
     padding: 100px 0 0 20px;
 
-    @include d(767) {
+    @include d(991) {
       padding: 60px 0 0 0;
+    }
+
+    @include d(767) {
+      padding: 40px 0;
     }
   }
 
   .app-mask {
     right: 0;
+  }
+
+  .app__text {
+    @include d(767) {
+      max-width: 100%;
+
+      p {
+        max-width: 100%;
+      }
+    }
   }
 
   .app__img {
@@ -26,10 +40,18 @@
       right: 0;
     }
 
-    @include d(768) {
-      top: 0;
-      left: 50%;
-      transform: translate(-60%, 0);
+    @include d(1199) {
+      top: -120px;
+      right: 0;
+    }
+
+    @include d(991) {
+      position: static;
+      transform: translate(0, 0);
+    }
+
+    @include d(767) {
+      display: none;
     }
 
     .circle {

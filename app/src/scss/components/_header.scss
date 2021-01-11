@@ -153,8 +153,7 @@
         overflow: visible;
 
         @include d(768) {
-          right: 0;
-          left: auto;
+          left: -24px;
         }
 
         &::before {
@@ -168,6 +167,10 @@
           border-style: solid;
           border-width: 0 5px 5px 5px;
           border-color: transparent transparent $white transparent;
+
+          @include d(768) {
+            left: 35px;
+          }
         }
       }
 
