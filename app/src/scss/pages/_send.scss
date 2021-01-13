@@ -166,7 +166,9 @@
     display: flex;
     margin: 0 -12px;
     margin-bottom: 20px;
-
+    @include d(575) {
+      display: block;
+    }
     &:last-of-type {
       margin-bottom: 50px;
     }
@@ -180,7 +182,9 @@
     flex-direction: column;
     font-size: 14px;
     color: $grayLight;
-
+    @include d(575) {
+      margin-bottom: 20px;
+    }
     .nice-select {
       margin: 0;
       height: 26px;
