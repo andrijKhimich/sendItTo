@@ -81,10 +81,6 @@
   &:first-child {
     margin-right: 48px;
 
-    @include d(991) {
-      margin-right: 20px;
-    }
-
     @include d(768) {
       margin-right: 0;
     }
@@ -189,11 +185,6 @@
   &-country,
   &-language {
     margin-right: 44px;
-
-    @include d(991) {
-      margin-right: 20px;
-
-    }
 
     @include d(768) {
       margin-right: 0;
