@@ -37,7 +37,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      background-color: $primary;
+      background-color: transparent;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -46,12 +46,13 @@
       left: -10px;
       opacity: 0;
       pointer-events: none;
-      transition: left $hover-duration $timing, opacity $hover-duration $timing;
+      transition: left $hover-duration $timing, opacity $hover-duration $timing, background-color $hover-duration $timing;
 
       &.open {
         left: 0;
         opacity: 1;
         pointer-events: initial;
+        background-color: $primary;
       }
     }
   }
