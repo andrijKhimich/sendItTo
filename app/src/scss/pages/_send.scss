@@ -166,9 +166,11 @@
     display: flex;
     margin: 0 -12px;
     margin-bottom: 20px;
+
     @include d(1199) {
       display: block;
     }
+
     &:last-of-type {
       margin-bottom: 50px;
     }
@@ -182,9 +184,11 @@
     flex-direction: column;
     font-size: 14px;
     color: $grayLight;
+
     @include d(1199) {
       margin-bottom: 20px;
     }
+
     .nice-select {
       margin: 0;
       height: 26px;
@@ -513,11 +517,19 @@
   &__row {
     display: flex;
     margin: 0 -12px 50px -12px;
+
+    @include d(1024) {
+      display: block;
+    }
   }
 
   &__box {
     flex: 0 0 50%;
     padding: 0 12px;
+
+    @include d(1024) {
+      margin-bottom: 20px;
+    }
   }
 
   .btn {
